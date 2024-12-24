@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<html lang="en">
+<head>
+    <link href="{{ '/assets/css/style.scss' | relative_url }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+
+</head>
+<body>
+    {% include header.html %}
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h4 > <span class="typewriter">Engineering expertise meets modern AI</span></h4>
+            </section>
+            <section id="contact" style="margin-top: 90px;">
+                <div class="flex">
+                    <div class="col-12 col-md-6 hbspot-form">
+                      {% include contactform.html %}
+                     </div>
+                     <div class="col-12 col-md-6 address-info">
+                        <div>
+                       <h4>USA</h2>
+                       <p> {{ site.data.contact.us_office }}</p>
+                       <p><a href="tel: {{ site.data.contact.phone }}"> {{ site.data.contact.phone_us }} </a></p>
+                       <div class="line-seperator"></div>
+                        <h4 class="mt-4">India</h2>
+                        <p>{{ site.data.contact.india_office }}</p>
+                        <p><a href="tel: {{ site.data.contact.phone }}"> {{ site.data.contact.phone_in }} </a></p>
+                        <div class="d-flex email-block">
+                          <span>Email : </span>
+                          <a href="mailto: {{ site.data.contact.email }}">{{ site.data.contact.email }}</a>
+                         </div>
+                        </div>
+                       </div>
+                  </div>
+            </section>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
+    <script>
+        Reveal.initialize({
+        // plugins: [RevealMarkdown],
+        view: "scroll",
+        scrollProgress: true,
+        viewDistance: 3,
+        hash: true,
+      });
+
+      const typewriterText = document.querySelector('.typewriter'); 
+      const text = typewriterText.textContent; 
+      function refreshTypewriter() { typewriterText.textContent = ''; 
+      let index = 0; 
+      const interval = setInterval(() => { 
+        typewriterText.textContent += text.charAt(index); index++; 
+        if (index === text.length) {
+             clearInterval(interval); } 
+            }, 100); } 
+             setInterval(refreshTypewriter, 5000); refreshTypewriter();
+      </script>
+</body>
+</html>
