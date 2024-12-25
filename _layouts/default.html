@@ -7,38 +7,13 @@ layout: default
     <link href="{{ '/assets/css/style.scss' | relative_url }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    {% include header.html %}
     <div class="reveal">
         <div class="slides">
-            <section>
-                <h4 > <span class="typewriter">Engineering expertise meets modern AI</span></h4>
-            </section>
-            <section id="contact" style="margin-top: 90px;">
-                <div class="flex">
-                    <div class="col-12 col-md-6 hbspot-form">
-                      {% include contactform.html %}
-                     </div>
-                     <div class="col-12 col-md-6 address-info">
-                        <div>
-                       <h4>USA</h2>
-                       <p> {{ site.data.contact.us_office }}</p>
-                       <p><a href="tel: {{ site.data.contact.phone }}"> {{ site.data.contact.phone_us }} </a></p>
-                       <div class="line-seperator"></div>
-                        <h4 class="mt-4">India</h2>
-                        <p>{{ site.data.contact.india_office }}</p>
-                        <p><a href="tel: {{ site.data.contact.phone }}"> {{ site.data.contact.phone_in }} </a></p>
-                        <div class="d-flex email-block">
-                          <span>Email : </span>
-                          <a href="mailto: {{ site.data.contact.email }}">{{ site.data.contact.email }}</a>
-                         </div>
-                        </div>
-                       </div>
-                  </div>
-            </section>
+            {{content}}
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
@@ -51,17 +26,69 @@ layout: default
         viewDistance: 3,
         hash: true,
       });
+      
+      const texts = ["Vertical AI", "Intelligent Multimodal Experiences", "Agentic Workflows"];
+        const staticText = "Engineering expertise meets ";
+        const typewriterText = document.querySelector('.typewriter');
+        const staticTextElement = document.querySelector('#static-text');
+        let currentIndex = 0;
 
-      const typewriterText = document.querySelector('.typewriter'); 
-      const text = typewriterText.textContent; 
-      function refreshTypewriter() { typewriterText.textContent = ''; 
-      let index = 0; 
-      const interval = setInterval(() => { 
-        typewriterText.textContent += text.charAt(index); index++; 
-        if (index === text.length) {
-             clearInterval(interval); } 
-            }, 100); } 
-             setInterval(refreshTypewriter, 5000); refreshTypewriter();
+        function typeWriterEffect(text, element, callback) {
+            let index = 0;
+            const interval = setInterval(() => {
+                element.textContent += text.charAt(index);
+                index++;
+                if (index === text.length) {
+                    clearInterval(interval);
+                    setTimeout(callback, 1000);
+                }
+            }, 300);
+        }
+
+        function deleteWriterEffect(callback) {
+            const text = typewriterText.textContent;
+            let index = text.length - 1;
+            const interval = setInterval(() => {
+                typewriterText.textContent = text.substring(0, index);
+                index--;
+                if (index < 0) {
+                    clearInterval(interval);
+                    callback();
+                }
+            }, 100);
+        }
+
+        function loopTypeWriter() {
+            typeWriterEffect(texts[currentIndex], typewriterText, () => {
+                setTimeout(() => {
+                    deleteWriterEffect(() => {
+                        currentIndex = (currentIndex + 1) % texts.length;
+                        loopTypeWriter();
+                    });
+                }, 1000);
+            });
+        }
+
+        typeWriterEffect(staticText, staticTextElement, loopTypeWriter);
+
+         // Modal Script
+         const modal = document.getElementById("contact-modal");
+        const btn = document.getElementById("get-in-touch");
+        const span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
       </script>
 </body>
 </html>
