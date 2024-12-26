@@ -8,7 +8,7 @@ layout: default
 
 <section id="home">
 <div class="logo"> <img src="{{ 'assets/images/ComonadLogoConcept.png' | relative_url }}" alt="Comonad.ai Logo"> </div>
-<h4 class="typewriter" ></h4>
+<h4 class="typewriter"> <span class="static-text">Engineering expertise meets </span> <span class="typewriter-text">Domain Specific Models. Agentic Workflows. Intelligent Multimodal Experiences</span> </h4>
 <div class="cta-container"> <button id="get-in-touch" class="cta-button">Get in Touch</button> </div>
 <div id="contact-modal" class="modal"> 
 <div class="modal-content"> 
@@ -21,7 +21,7 @@ layout: default
         <div>
         <h5 class="mt-4">Singapore</h5>
         <p>{{ site.data.contact.singapore_office }}</p>
-        <p><a href="tel: {{ site.data.contact.phone }}"> {{ site.data.contact.phone_in }} </a></p>
+        <!-- <p><a href="tel: {{ site.data.contact.phone }}"> {{ site.data.contact.phone_in }} </a></p> -->
         <div class="d-flex email-block">
             <span>Email : </span>
             <a href="mailto: {{ site.data.contact.email }}">{{ site.data.contact.email }}</a>

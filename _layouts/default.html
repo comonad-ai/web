@@ -3,75 +3,82 @@ layout: default
 ---
 
 <html lang="en">
-<head>
-    <link href="{{ '/assets/css/style.scss' | relative_url }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <head>
+    <link
+      href="{{ '/assets/css/style.scss' | relative_url }}"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="reveal">
-        <div class="slides">
-            {{content}}
-        </div>
+      <div class="slides">{{content}}</div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
     <script>
-        Reveal.initialize({
+      Reveal.initialize({
         // plugins: [RevealMarkdown],
         view: "scroll",
         scrollProgress: true,
         viewDistance: 3,
         hash: true,
       });
-      
-        const typeWriterElement = document.querySelector('.typewriter');
-        let currentIndex = 0;
 
-        var typewriter = new Typewriter(typeWriterElement, {
-            loop: true,
-            delay: 75,
-            });
+      const staticText = document.querySelector(".static-text").textContent;
+      const typeWriterElement = document.querySelector(".typewriter-text");
+      const texts = typeWriterElement.textContent.split(".");
 
-        typewriter
-        .pauseFor(2500)
-        .typeString('Engineer expertise meets ')
-        .pauseFor(300)
-        .typeString('Domain Specific Models.')
-        .pauseFor(1000)
-        .deleteChars(23)
-        .typeString('Agentic Workflows.')
-        .pauseFor(1000)
-        .deleteChars(18)
-        .pauseFor(1000)
-        .typeString('Intelligent Multimodal Experiences.')
-        .pauseFor(1000)
-        .deleteChars(36)
-        .pauseFor(1000)
-        .start();
+      const typeWriterelement = document.querySelector(".typewriter");
 
+      const typewriterText = new Typewriter(typeWriterelement, {
+        loop: true,
+        delay: 75,
+      });
+      typewriterText.pauseFor(2500);
+      typewriterText.typeString(staticText).pauseFor(300);
+      texts.forEach((text, index) => {
+        if (index > 0)
+          typewriterText
+            .deleteChars(texts[index - 1].length + 1)
+            .pauseFor(1000);
+        typewriterText.typeString(text + ".").pauseFor(1000);
+      });
+      typewriterText.start();
 
-         // Modal Script
-         const modal = document.getElementById("contact-modal");
-        const btn = document.getElementById("get-in-touch");
-        const span = document.getElementsByClassName("close")[0];
+      const modal = document.getElementById("contact-modal");
+      const btn = document.getElementById("get-in-touch");
+      const span = document.getElementsByClassName("close")[0];
 
-        btn.onclick = function() {
-            modal.style.display = "block";
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target === modal) {
+          modal.style.display = "none";
         }
-
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        }
-      </script>
-</body>
+      };
+    </script>
+  </body>
 </html>
