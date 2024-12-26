@@ -8,7 +8,7 @@ layout: default
 
 <section id="home">
 <div class="logo"> <img src="{{ 'assets/images/ComonadLogoConcept.png' | relative_url }}" alt="Comonad.ai Logo"> </div>
-<h4 class="typewriter-text" > <span id="static-text"></span><span class="typewriter"></span></h4>
+<h4 class="typewriter" ></h4>
 <div class="cta-container"> <button id="get-in-touch" class="cta-button">Get in Touch</button> </div>
 <div id="contact-modal" class="modal"> 
 <div class="modal-content"> 

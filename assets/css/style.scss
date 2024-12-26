@@ -54,13 +54,14 @@ body {
 
 .typewriter {
   font-family: "Comfortaa", cursive !important;
+  font-size: 32px !important;
   text-transform: capitalize !important;
-  border-right: 0.15em solid orange;
+  // border-right: 0.15em solid orange;
   color: #008324;
   // white-space: nowrap;
   margin: 0 auto;
   // letter-spacing: .15em;
-  animation: blink-caret 0.75s step-end infinite;
+  // animation: blink-caret 0.75s step-end infinite;
 }
 
 @keyframes blink-caret {

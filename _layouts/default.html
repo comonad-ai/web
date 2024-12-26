@@ -9,6 +9,7 @@ layout: default
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 </head>
 <body>
     <div class="reveal">
@@ -27,49 +28,31 @@ layout: default
         hash: true,
       });
       
-      const texts = ["Vertical AI", "Intelligent Multimodal Experiences", "Agentic Workflows"];
-        const staticText = "Engineering expertise meets ";
-        const typewriterText = document.querySelector('.typewriter');
-        const staticTextElement = document.querySelector('#static-text');
+        const typeWriterElement = document.querySelector('.typewriter');
         let currentIndex = 0;
 
-        function typeWriterEffect(text, element, callback) {
-            let index = 0;
-            const interval = setInterval(() => {
-                element.textContent += text.charAt(index);
-                index++;
-                if (index === text.length) {
-                    clearInterval(interval);
-                    setTimeout(callback, 1000);
-                }
-            }, 300);
-        }
-
-        function deleteWriterEffect(callback) {
-            const text = typewriterText.textContent;
-            let index = text.length - 1;
-            const interval = setInterval(() => {
-                typewriterText.textContent = text.substring(0, index);
-                index--;
-                if (index < 0) {
-                    clearInterval(interval);
-                    callback();
-                }
-            }, 100);
-        }
-
-        function loopTypeWriter() {
-            typeWriterEffect(texts[currentIndex], typewriterText, () => {
-                setTimeout(() => {
-                    deleteWriterEffect(() => {
-                        currentIndex = (currentIndex + 1) % texts.length;
-                        loopTypeWriter();
-                    });
-                }, 1000);
+        var typewriter = new Typewriter(typeWriterElement, {
+            loop: true,
+            delay: 75,
             });
-        }
 
-        typeWriterEffect(staticText, staticTextElement, loopTypeWriter);
+        typewriter
+        .pauseFor(2500)
+        .typeString('Engineer expertise meets ')
+        .pauseFor(300)
+        .typeString('Domain Specific Models.')
+        .pauseFor(1000)
+        .deleteChars(23)
+        .typeString('Agentic Workflows.')
+        .pauseFor(1000)
+        .deleteChars(18)
+        .pauseFor(1000)
+        .typeString('Intelligent Multimodal Experiences.')
+        .pauseFor(1000)
+        .deleteChars(36)
+        .pauseFor(1000)
+        .start();
+
 
          // Modal Script
          const modal = document.getElementById("contact-modal");
