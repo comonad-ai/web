@@ -19,8 +19,8 @@ layout: default
         </div>
         <div class="col-12 col-md-6 address-info">
         <div>
-        <h5 class="mt-4">India</h5>
-        <p>{{ site.data.contact.india_office }}</p>
+        <h5 class="mt-4">Singapore</h5>
+        <p>{{ site.data.contact.singapore_office }}</p>
         <p><a href="tel: {{ site.data.contact.phone }}"> {{ site.data.contact.phone_in }} </a></p>
         <div class="d-flex email-block">
             <span>Email : </span>
