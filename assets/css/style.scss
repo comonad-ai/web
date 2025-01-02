@@ -32,7 +32,7 @@ body {
 }
 
 .contact-form button {
-  background-color: #81b94c;
+  background-color: #38761d;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -50,6 +50,7 @@ body {
 .typewriter-text {
   font-size: 28px !important;
   text-align: center;
+  color: #38761d;
 }
 
 .typewriter {
@@ -57,7 +58,7 @@ body {
   font-size: 32px !important;
   text-transform: capitalize !important;
   // border-right: 0.15em solid orange;
-  color: #008324;
+  color: #38761d;
   // white-space: nowrap;
   margin: 0 auto;
   // letter-spacing: .15em;
@@ -70,7 +71,7 @@ body {
     border-color: transparent;
   }
   50% {
-    border-color: #008324;
+    border-color: #38761d;
   }
 }
 
@@ -133,7 +134,7 @@ body {
 }
 
 .site-nav a:hover {
-  color: #81b94c;
+  color: #38761d;
 }
 
 .site-nav a::after {
@@ -141,7 +142,7 @@ body {
   display: block;
   width: 0;
   height: 2px;
-  background: #81b94c;
+  background: #38761d;
   transition: width 0.3s;
   position: absolute;
   bottom: 0;
@@ -222,8 +223,8 @@ body {
     display: flex;
     font-family: "Comfortaa", cursive !important;
     font-size: 20px;
-    background-color: #008324;
-    border: 1px solid #008324;
+    background-color: #38761d;
+    border: 1px solid #38761d;
     padding: 10px;
     border-radius: 4px;
     span {
@@ -238,7 +239,7 @@ body {
       background-color: #ffff;
       
       span, a{
-        color: #008324;
+        color: #38761d;
       }
       
     }
@@ -291,21 +292,21 @@ body {
 }
 
 .address-info h2 {
-  color: #81b94c;
+  color: #38761d;
 }
 
 .address-info p {
   color: #333;
 }
 .address-info p a {
-  color: #008324;
+  color: #38761d;
   &:hover{
     color: #01661c;
   }
 }
 
 a {
-  color: #81b94c;
+  color: #38761d;
   text-decoration: none;
 }
 
@@ -320,10 +321,11 @@ a:hover {
 }
 .cta-button {
   padding: 15px 30px;
-  border: 2px solid #008324;
-  border-radius: 5px;
+  border: 2px solid #38761d;
+  border-radius: 14px;
   font-size: 16px;
-  background-color: #008324;
+  font-family: "Comfortaa", cursive !important;
+  background-color: #38761d;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
