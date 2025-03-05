@@ -8,7 +8,9 @@ layout: default
 
 <section id="home">
 <div class="logo"> <img src="{{ 'assets/images/ComonadLogoConcept.png' | relative_url }}" alt="Comonad.ai Logo"> </div>
-<h4 class="typewriter"> <span class="static-text">Engineering expertise meets </span> <span class="typewriter-text">Domain Specific Models. Agentic Workflows. Intelligent Multimodal Experiences</span> </h4>
+<div class="desc"><p>We're incubating the next generation of Platform, SaaS, Data Infrastructure & Vertical AI startups.</p>
+<p>Built in India, for the world.</p>
+<p>Our services include early stage funding, fractional CTO, PMF, GTM & Operations for India-US corridor.</p>
 <div class="cta-container"> <button id="get-in-touch" class="cta-button">Get in Touch</button> </div>
 <div id="contact-modal" class="modal"> 
 <div class="modal-content"> 
