@@ -13,7 +13,7 @@ body {
 
 #home{
   height: 100vh !important;
-  width: 100% !important;
+  // width: 100% !important;
   display: flex !important;
   flex-direction: column;
   justify-content: center;
@@ -374,4 +374,67 @@ a:hover {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+
+.address-info{
+  h5{
+    font-size: 0.9em !important;
+  }
+  address{
+    font-size: 0.6em !important;
+  }
+  .email-block{
+    margin-bottom: 0.5em;
+  }
+}
+
+section{
+  p{
+    font-size: 0.9em !important;
+  }
+}
+
+#incubation{
+  ul{
+    margin-left: 1.5em;
+    li{
+      font-size: 0.8em !important;
+    }
+  }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #9f9f9f;
+  padding: 20px 0;
+  text-align: center;
+  z-index: 1000;
+  ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex !important;
+      justify-content: center;
+      gap: 1em;
+
+      li {
+          display: inline;
+          scroll-margin-top: 64px;
+          a {
+              text-decoration: none;
+              color: #121212;
+              font-weight: bold;
+              font-size: 0.5em;
+              transition: 0.3s;
+              &:hover{
+                color:#017a21;
+              }
+          }
+      }
+  }
 }
