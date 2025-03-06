@@ -43,11 +43,11 @@ layout: default
         </div>
     </section>
     <section id="contact">
-    <div class="flex">
-                <div class="col-12 col-md-6 hbspot-form">
+    <div class="contact-container">
+                <div class="hbspot-form">
                     {% include contactform.html %}
                 </div>
-                <div class="col-12 col-md-6 address-info">
+                <div class="address-info">
                     <div>
                         <!-- <h5 class="mt-4">Singapore</h5> -->
                         <!-- <p>{{ site.data.contact.singapore_office }}</p> -->
