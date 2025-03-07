@@ -357,10 +357,11 @@ a:hover {
 
 .address-info{
   h5{
-    font-size: 0.9em !important;
+    font-size: 0.7em !important;
   }
   address{
     font-size: 0.6em !important;
+    padding-bottom: 1em;
   }
   .email-block{
     margin-bottom: 0.5em;
@@ -369,7 +370,10 @@ a:hover {
 
 section{
   p{
-    font-size: 0.9em !important;
+    font-size: 0.6em !important;
+    border: 1px solid #e0e0e7;
+    border-radius: 4px;
+    padding: 0.5em 1em;
   }
 }
 
@@ -377,7 +381,9 @@ section{
   ul{
     margin-left: 1.5em;
     li{
-      font-size: 0.8em !important;
+      font-size: 0.6em !important;
+      
+      padding: 0.3em 1em;
     }
   }
 }
@@ -408,7 +414,7 @@ section{
   left: 0;
   width: 100%;
   background-color: #fff;
-  border-bottom: 1px solid #9f9f9f;
+  border-bottom: 1px solid #e0e0e7;
   padding: 20px 0;
   text-align: center;
   z-index: 1000;
