@@ -6,44 +6,55 @@ layout: default
 ---
 
 <nav class="navbar">
-        <ul>
-            <li><a href="/#home">Home</a></li>
-            <li><a href="/#about">About</a></li>
-            <li><a href="/#incubation">Incubation</a></li>
-            <li><a href="/#contact">Contact</a></li>
-        </ul>
+        <div class="container">
+            <ul>
+                <li><a href="/#home">Home</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#incubation">Incubation</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </div>
 </nav>
 <section>
     <section id="home">
-        <div class="logo">
-            <img src="{{ 'assets/images/ComonadLogoConcept.png' | relative_url }}" alt="Comonad.ai Logo">
-        </div>
-        <div class="desc">
-            <p>We're incubating the next generation of Platform, SaaS, Data Infrastructure & Vertical AI startups.</p>
-            <p>Built in India, for the world.</p>
-            <p>Our services include early stage funding, fractional CTO, PMF, GTM & Operations for India-US corridor.</p>
+        <div class="container">
+            <div class="logo">
+                <img src="{{ 'assets/images/ComonadLogoConcept.png' | relative_url }}" alt="Comonad.ai Logo">
+            </div>
+            <div class="desc">
+                <p>We're incubating the next generation of Platform, SaaS, Data Infrastructure & Vertical AI startups.</p>
+                <p>Built in India, for the world.</p>
+                <p>Our services include early stage funding, fractional CTO, PMF, GTM & Operations for India-US corridor.</p>
+            </div>
         </div>
     </section>
     <section id="about">
-        <div class="desc">
-            <p>We build and advise the next generation of tech startups in India. Our mission is to help Indian startups build world class products for a global audience.</p>
-            <p>Our portfolio focus is on early to growth stage B2B SaaS, Platform infrastructure & Vertical AI.</p>
+        <div class="container">
+            <h5>About</h5>
+            <div class="desc">
+                <p>We build and advise the next generation of tech startups in India. Our mission is to help Indian startups build world class products for a global audience.</p>
+                <p>Our portfolio focus is on early to growth stage B2B SaaS, Platform infrastructure & Vertical AI.</p>
+            </div>
         </div>
     </section>
     <section id="incubation">
-        <div class="desc">
-            <p>We provide a broad range of advisory services to incubatees.</p>
-            <ul>
-                <li>Product Market Fit</li>
-                <li>CTO in Residence & Engineering Advisory</li>
-                <li>Global GTM: 0-1 and Growth</li>
-                <li>India-US Corridor</li>
-                <li>Investor & VC Nexus</li>
-            </ul>
+        <div class="container">
+        <h5>Incubation</h5>
+            <div class="desc">
+                <p>We provide a broad range of advisory services to incubatees.</p>
+                <ul>
+                    <li>Product Market Fit</li>
+                    <li>CTO in Residence & Engineering Advisory</li>
+                    <li>Global GTM: 0-1 and Growth</li>
+                    <li>India-US Corridor</li>
+                    <li>Investor & VC Nexus</li>
+                </ul>
+            </div>
         </div>
     </section>
     <section id="contact">
-    <div class="contact-container">
+    <div class="contact-container container">
+            <h5>Contact</h5>
                 <div class="hbspot-form">
                     {% include contactform.html %}
                 </div>

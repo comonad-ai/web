@@ -7,6 +7,13 @@ body {
 }
 
 
+.container {
+  width: 90%; 
+  max-width: 1200px;  
+  margin: 0 auto;  
+  padding: 20px;  
+  box-sizing: border-box; 
+}
 
 #home{
   height: 100vh !important;
@@ -380,11 +387,15 @@ a:hover {
 }
 
 section{
+  h5{
+    font-size: 0.6em;
+    text-transform: capitalize !important;
+  }
   .desc{
     border: 1px solid #e0e0e7;
     border-radius: 4px;
     padding: 0.5em 1em;
-    text-align: center;
+    // text-align: center;
   }
   p{
     font-size: 0.4em !important;
@@ -455,6 +466,7 @@ section{
       
   }
 }
+
 .navbar {
   position: fixed;
   top: 0;
@@ -462,7 +474,7 @@ section{
   width: 100%;
   background-color: #fff;
   border-bottom: 1px solid #e0e0e7;
-  padding: 20px 0;
+  // padding: 20px 0;
   text-align: center;
   z-index: 1000;
   ul {
@@ -470,7 +482,7 @@ section{
       padding: 0;
       margin: 0;
       display: flex !important;
-      justify-content: center;
+      // justify-content: center;
       gap: 1em;
 
       li {
