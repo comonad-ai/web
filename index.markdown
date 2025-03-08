@@ -65,7 +65,7 @@ layout: default
                             <span>Email : </span>
                             <a href="mailto: {{ site.data.contact.email }}">{{ site.data.contact.email }}</a>
                         </div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d307.48517461459124!2d77.64682082610716!3d13.021658573626059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae172ea4cacbfb%3A0xfd7c2fdc99e03a14!2s838%2C%205th%20Cross%20Rd%2C%20HRBR%20Layout%201st%20Block%2C%20HRBR%20Layout%2C%20Kalyan%20Nagar%2C%20Bengaluru%2C%20Karnataka%20560043!5e1!3m2!1sen!2sin!4v1741238731766!5m2!1sen!2sin" width="400" height="240" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d307.48517461459124!2d77.64682082610716!3d13.021658573626059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae172ea4cacbfb%3A0xfd7c2fdc99e03a14!2s838%2C%205th%20Cross%20Rd%2C%20HRBR%20Layout%201st%20Block%2C%20HRBR%20Layout%2C%20Kalyan%20Nagar%2C%20Bengaluru%2C%20Karnataka%20560043!5e1!3m2!1sen!2sin!4v1741238731766!5m2!1sen!2sin"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
