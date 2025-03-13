@@ -28,9 +28,8 @@ layout: default
                 <img src="{{ 'assets/images/ComonadLogoConcept.png' | relative_url }}" alt="Comonad.ai Logo">
             </div>
             <div class="desc">
-                <p>We're incubating the next generation of Platform, SaaS, Data Infrastructure & Vertical AI startups.</p>
-                <p>Built in India, for the world.</p>
-                <p>Our services include early stage funding, fractional CTO, PMF, GTM & Operations for India-US corridor.</p>
+                <center><p> 🚀 We're incubating the next generation of Platform, SaaS, Data Infrastructure & Vertical AI startups.</p>
+                <p> 🇮 Built in India, for the world.</p></center>
             </div>
         </div>
     </section>
