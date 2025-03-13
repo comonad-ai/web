@@ -30,7 +30,7 @@ layout: default
     </section>
     <section id="about">
         <div class="container">
-            <h5>About</h5>
+            <h3>About</h3>
             <div class="desc">
                 <p>We build and advise the next generation of tech startups in India. Our mission is to help Indian startups build world class products for a global audience.</p>
                 <p>Our portfolio focus is on early to growth stage B2B SaaS, Platform infrastructure & Vertical AI.</p>
@@ -39,7 +39,7 @@ layout: default
     </section>
     <section id="incubation">
         <div class="container">
-        <h5>Incubation</h5>
+        <h3>Incubation</h3>
             <div class="desc">
                 <p>We provide a broad range of advisory services to incubatees.</p>
                 <ul>
@@ -54,7 +54,7 @@ layout: default
     </section>
     <section id="contact">
     <div class="container">
-    <h5>Contact</h5>
+    <h3>Contact</h3>
     <div class="contact-container">
                 <div class="hbspot-form">
                     {% include contactform.html %}
