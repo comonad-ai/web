@@ -66,9 +66,9 @@ layout: default
                         <div class="address">
                 <h5>India.</h5>
                 <address>
-                    HRBR.space <br>
-                    STE 1, 232, 9th Main Road,<br>
-                    Kalyana Nagar 1st Block <br>
+                    43 Worklabs <br>
+                    232, 2nd Floor (STE1), 9th Main Road<br>
+                    Kalyan Nagar 1st Block <br>
                     Bangalore - 560043
                 </address>
                 </div>
