@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
 
-body {
-  background-color: #121212;
-  color: #ffffff;
+body,.reveal {
+  // background-color: #121212;
+  // color: #ffffff;
   font-family: "Comfortaa", cursive !important;
 }
 
@@ -376,10 +376,11 @@ a:hover {
   background-color: #fcfcfc;
   h5{
     font-size: 0.9em !important;
+    font-family: "Comfortaa", cursive !important;
     text-align: start;
   }
   address{
-    font-size: 0.8em !important;
+    font-size: 0.65em !important;
     padding-bottom: 1em;
   }
   .email-block{
@@ -400,6 +401,7 @@ section{
   h3{
     text-align: center;
     text-transform: capitalize !important;
+    font-family: "Comfortaa", cursive !important;
   }
   // .desc{
     // border: 1px solid #e0e0e7;
@@ -447,7 +449,7 @@ section{
   }
 }
 
-#about{
+#about, #portfolio{
   h3{
     margin-bottom: 1.7em;
   }
@@ -455,6 +457,30 @@ section{
     h3{
       margin-bottom: 2em;
 
+    }
+  }
+}
+
+#portfolio{
+  .product-logs{
+    display: flex;
+    gap:1em;
+    align-items: center;
+    .prod-logo{
+      width: 6em;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 10px;
+    }
+    }
+  }
+  @media (max-width:992px) {
+    .product-logs{
+      flex-direction: column;
+      .prod-logo{
+        width: 9em;
+      }
     }
   }
 }
@@ -485,7 +511,7 @@ section{
   }
   @media (max-width:992px) {
     h3{
-      margin-bottom: 1.2em;
+      margin-bottom: 0.5em !important;
     }
     .contact-container{
     flex-direction: column;
@@ -517,42 +543,75 @@ section{
   width: 100%;
   background-color: #fff;
   border-bottom: 1px solid #e0e0e7;
-  // padding: 20px 0;
-  text-align: center;
   z-index: 1000;
-  ul {
+  padding: 5px 0;
+
+  .nav-list {
       list-style: none;
       padding: 0;
       margin: 0;
-      display: flex !important;
-      // justify-content: center;
+      display: flex;
       gap: 1em;
-
       li {
-          display: inline;
           scroll-margin-top: 64px;
+
           a {
               text-decoration: none;
               color: #121212;
               font-weight: bold;
-              font-size: 0.5em;
+              font-size: 0.6em;
               transition: 0.3s;
-              &:hover{
-                color:#017a21;
+
+              &:hover {
+                  color: #017a21;
               }
           }
       }
   }
-  @media (max-width:992px) {
-    ul{
-      gap:1.5em;
-      li{
-        scroll-margin-top: 84px;
-        padding: 10px 0;
-        a{
-          font-size: 1em;
-        }
+
+  /* Hamburger Menu */
+  .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+
+      .bar {
+          width: 42px;
+          height: 6px;
+          background-color: #121212;
+          margin: 4px 0;
+          transition: 0.4s;
       }
-    }
+  }
+
+  /* Mobile View */
+  @media (max-width: 992px) {
+      .menu-toggle {
+          display: flex;
+      }
+      .nav-list {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          background-color: #fff;
+          position: absolute;
+          top: 64px;
+          left: 0;
+          padding: 1em;
+          border-bottom: 1px solid #e0e0e7;
+
+          &.active {
+              display: flex;
+          }
+
+          li {
+              text-align: center;
+              padding: 10px 0;
+
+              a {
+                  font-size: 1em;
+              }
+          }
+      }
   }
 }
