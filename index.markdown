@@ -53,8 +53,9 @@ layout: default
         </div>
     </section>
     <section id="contact">
-    <div class="contact-container container">
-            <h5>Contact</h5>
+    <div class="container">
+    <h5>Contact</h5>
+    <div class="contact-container">
                 <div class="hbspot-form">
                     {% include contactform.html %}
                 </div>
@@ -80,6 +81,7 @@ layout: default
                     </div>
                 </div>
             </div>
+        </div>
     </section>
     <div id="contact-modal" class="modal">
         <div class="modal-content">

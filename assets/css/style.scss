@@ -32,8 +32,7 @@ body {
   
   @media (max-width:992px) {
     .logo{
-      position: absolute;
-      top:200;
+      margin-bottom: 2em;
       img{
         height: 240px;
       }
@@ -374,8 +373,10 @@ a:hover {
 
 
 .address-info{
+  background-color: #fcfcfc;
   h5{
-    font-size: 0.5em !important;
+    font-size: 0.6em !important;
+    text-align: start;
   }
   address{
     font-size: 0.5em !important;
@@ -388,7 +389,8 @@ a:hover {
 
 section{
   h5{
-    font-size: 0.6em;
+    font-size: 1em;
+    text-align: center;
     text-transform: capitalize !important;
   }
   .desc{
@@ -398,34 +400,53 @@ section{
     // text-align: center;
   }
   p{
-    font-size: 0.4em !important;
+    font-size: 0.5em !important;
   }
   @media (max-width:992px) {
     p{
-      font-size: 0.7em !important;
+      font-size: 0.8em !important;
+    }
+    h5{
+      font-size: 2em;
     }
   }
 }
 
 #incubation{
   ul{
-    margin-left: 1.5em;
+    margin-left: 1em;
+    list-style: "➤";
     li{
-      font-size: 0.4em !important;
-      
+      font-size: 0.5em !important;
+      font-weight: 600;
       padding: 0.3em 1em;
     }
+    
   }
   @media (max-width:992px) {
     ul{
       li{
-        font-size: 0.7em !important;
+        font-size: 0.8em !important;
       }
+    }
+    h5{
+      margin-bottom: 2em;
+    }
+  }
+}
+
+#about{
+  @media (max-width:992px) {
+    h5{
+      margin-bottom: 2em;
     }
   }
 }
 
 #contact{
+  h5{
+    margin-bottom: 2em;
+  }
   .contact-container{
     display: flex;
     .hbspot-form,.address-info{
@@ -499,5 +520,17 @@ section{
               }
           }
       }
+  }
+  @media (max-width:992px) {
+    ul{
+      gap:1.5em;
+      li{
+        scroll-margin-top: 84px;
+        padding: 10px 0;
+        a{
+          font-size: 0.8em;
+        }
+      }
+    }
   }
 }
