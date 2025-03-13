@@ -415,8 +415,8 @@ section{
       font-size: 1.2em !important;
       padding: 10px 0;
     }
-    h5{
-      font-size: 2em;
+    h3{
+      font-size: 2em !important;
     }
   }
 }
@@ -485,7 +485,7 @@ section{
   }
   @media (max-width:992px) {
     h3{
-      margin-bottom: 1.5em;
+      margin-bottom: 1.2em;
     }
     .contact-container{
     flex-direction: column;
