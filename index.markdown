@@ -29,7 +29,7 @@ layout: default
             </div>
             <div class="desc">
                 <center><p> 🚀 We're incubating the next generation of Platform, SaaS, Data Infrastructure & Vertical AI startups.</p>
-                <p> 🇮 Built in India, for the world.</p></center>
+                <p>🇮 Built in India, for the world.</p></center>
             </div>
         </div>
     </section>
